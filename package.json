@@ -7,6 +7,10 @@
   "repository": {
     "url": "alume-com/eslint-config"
   },
+  "scripts": {
+    "prepare": "npm run codeartifact",
+    "codeartifact": "aws codeartifact login --tool npm --repository alume-design-system --domain alume-design-system --domain-owner 747937222196 --region us-east-1 --namespace @alume-design-system"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
