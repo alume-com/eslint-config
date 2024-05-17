@@ -8,6 +8,7 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
+    'standard',
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -17,7 +18,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint", "prettier"],
+  plugins: ["react", "@typescript-eslint"],
   rules: {
     "prettier/prettier": [
       "error",
@@ -40,6 +41,7 @@ module.exports = {
     ],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
+    'react/no-unknown-property': 'error',
   },
   settings: {
     react: {
@@ -49,4 +51,7 @@ module.exports = {
       [require.resolve("@typescript-eslint/parser")]: [".ts", ".tsx", ".d.ts"],
     },
   },
+  ignorePatterns: [
+    'node_modules'
+  ]
 };
